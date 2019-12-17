@@ -1,0 +1,132 @@
+@charset "utf-8";
+/* CSS Document */
+
+@font-face
+{
+	font-family: "bnazanin";
+	src: url(../fonts/bnazanin.ttf);
+}
+*
+{
+	font-family: 'bnazanin';
+}
+body
+{
+	direction: rtl;
+}
+
+.header
+{
+	width: 98%; margin: auto; background: hsla(359,86%,59%,1.00); height: 150px; border-radius: 50px;
+}
+.header .title
+{
+	width: 40%;
+	height: 100% ;
+	float: right;
+	line-height: 100px;
+}
+.header h1
+{
+	color: white;
+	text-align: center;
+	font-size: 36px;
+}
+.header .service
+{
+	width: 30%;
+	height: 100%;
+	background:hsla(359,73%,65%,1.00);
+	float: right;
+}
+.service h3
+{
+	color: blue; text-align: center; font-size: 36px;
+}
+.header .logo
+{
+	width: 30%;
+	height: 100%;
+	background: hsla(179,78%,54%,1.00);
+	float: left;
+	text-align: left;
+}
+.logo img
+{
+	width: 60px;
+	height: 60px;
+}
+.menu
+{
+	width: 98%;  height: 50px; background:hsla(233,88%,66%,1.00); margin: auto; border-radius: 50px; 
+	line-height: 50px;
+}
+.menu ul
+{
+	list-style: none; color: white;
+}
+.menu ul li
+{
+	float: right; 
+	margin-left: 30px;
+}
+.menu a
+{
+	text-decoration: none;
+	color: white;
+}
+.menu li :hover a
+{
+	color: yellow;
+}
+.menu li ul
+{
+	display: none;
+	position: absolute;
+	width: 120px;
+	background: hsla(97,80%,60%,1.00);
+	margin-right: -30;
+}
+.menu li:hover ul
+{
+	display: block;
+}
+.content
+{
+	width: 98%; height: auto; background: hsla(358,76%,82%,1.00); margin: auto;
+}
+.footer
+{
+	width: 98%; height: 100px; background: hsla(0,3%,21%,1.00); margin: auto; border-radius: 50px; 
+}
+.login
+{
+	width: 40%; height: 200px; margin: auto; background:hsla(359,85%,52%,1.00);
+	
+}
+.myfrom
+{
+	width: 100%; margin-top: 10px; margin-right: 100px;line-height: 50px;
+}
+.welcome
+{
+	width: 90%; height: 100px; line-height: 50px; direction:rtl; background: hsla(233,90%,50%,1.00);
+	color: white; margin: auto; border-radius: 20px;
+}
+.user
+{
+	margin-right: 20px; font-size: 18px;
+}
+.exit
+{
+	 float:left; margin-left: 30px;  
+}
+.exit img
+{
+	width: 70px; height: 70px;
+}
+.myframe
+{
+	width: 90%; height: 800px; background: hsla(147,80%,61%,1.00); margin-right: 5%;
+}
+
