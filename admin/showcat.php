@@ -13,27 +13,27 @@
 	
 <body>
 	
-<?php
-	if(isset($_POST["add"]))
+
+	<?php
+	if (isset($_POST["add"]))
 	{
 		$n=$_POST["txtn"];
-		$sql="insert into tbl_cat(catname) value ('$n')";
+		$sql="insert into tbl_cat (catname) value ('$n')";
 		$result=mysqli_query($connect,$sql);
-		if ($result)
+		if($result)
 		{
-			echo 'نام دسته با موفقیت ثبت شد';
+			echo 'نام دسته با مئوفقیت ثبت گردید';
 		}
 		else
 		{
-			echo 'خطا در درج دسته';	
+			echo 'خطا در ثبت دسته';
 		}
-		
-			
 	}
 	if(isset($_POST["edit"]))
 	{
 		$id=$_POST["txtid"];
-		$n=$_POST["catname"];
+		$n=$_POST["txtn"];
+		
 	    $sql=" update tbl_cat set catname='$n' where id='$id' ";
 		$result=mysqli_query($connect,$sql);
 		if($result)
@@ -69,6 +69,9 @@
 		$sql="select * from tbl_cat where id='$id'";
 		$result=mysqli_query($connect,$sql);
 		$rows=mysqli_fetch_array($result);
+		
+		
+	 
 	?>
 	<form name="fmr" action="showcat.php" method="post">
 		<table dir="rtl" align="center" width="50%">
@@ -81,7 +84,7 @@
 				<td>نام</td>
 				<td><input type="text" name="txtn" id="txtn" value="<?php echo $rows["catname"];?>"></td>
 			</tr>
-			 
+			
 			<tr>
 				<th colspan="2"><input type="submit" value="ویرایش" name="edit"></th>
 			</tr>
@@ -93,12 +96,13 @@
 	
 	?>
 	
-	<form name="fmr" action="showcat.php" method="post">
+	<form name="fmr" action="showcat.php" method="post" >
 		<table dir="rtl" align="center" width="50%">
 			<tr>
 				<td>نام</td>
 				<td><input type="text" name="txtn" id="txtn"></td>
 			</tr>
+			
 			<tr>
 				<th colspan="2"><input type="submit" value="ثبت" name="add"></th>
 			</tr>
@@ -110,11 +114,13 @@
 	<hr><hr>
 	<table dir="rtl" align="center" width="100%" border="1">
 		<tr>
-			<th colspan="9">عنوان دسته کالا</th>
+			<th colspan="9">عنوان دسته </th>
 		</tr>
 		<tr>
 			<th>کد</th>
 			<th>نام</th>
+			
+			<th>ویرایش</th>
 			<th>حذف</th>
 		</tr>
 	
@@ -126,8 +132,9 @@
 	<tr>
 		<td><?php echo $rows["id"];?></td>
 		<td><?php echo $rows["catname"];?></td>
-		<td><a href="showcat.php"?ide=<?php echo $rows['id'];?>">ویرایش</a></td>
-		<td><a href="showcat.php"?idd=<?php echo $rows['id'];?>">حذف</a></td>
+		
+		<td><a href="showcat.php?ide=<?php echo $rows['id'];?>">ویرایش</a></td>
+		<td><a href="showcat.php?idd=<?php echo $rows['id'];?>">حذف</a></td>
 	</tr>
 	<?php }
 		?>

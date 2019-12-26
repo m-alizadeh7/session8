@@ -9,15 +9,14 @@
 	$c=$_POST["city"];
 	
 	include "../funcs.php";
-		connect();
 	
 	$sql1="select * from tbl_user where Username='$u'";
-	$res=mysql_query($sql1);
-	$num=mysql_num_rows($res);
+	$res=mysqli_query($connect,$sql1);
+	$num=mysqli_num_rows($res);
 	if($num==0)
 	{
 	$sql="insert into tbl_user(Fname,Lname,Username,Password,Gender,City) value ('$n','$f','$u','$p','$j','$c')";
-	$result=mysql_query($sql);
+	$result=mysqli_query($connect,$sql);
 	}
 	if($result)
 	{

@@ -17,7 +17,7 @@ body
 
 .header
 {
-	width: 98%; margin: auto; background: hsla(359,86%,59%,1.00); height: 150px; border-radius: 50px;
+	width: 98%; margin: auto; background: hsla(359,86%,59%,1.00); height: 150px; border-radius: 45px;
 }
 .header .title
 {
@@ -53,8 +53,8 @@ body
 }
 .logo img
 {
-	width: 60px;
-	height: 60px;
+	width: 30px;
+	height: 30px;
 }
 .menu
 {
@@ -97,7 +97,23 @@ body
 }
 .footer
 {
-	width: 98%; height: 100px; background: hsla(0,3%,21%,1.00); margin: auto; border-radius: 50px; 
+	width: 98%; height: 100px; background: hsla(0,3%,21%,1.00); float: right; margin-right: 5%; margin: auto; border-radius: 50px; 
+}
+.kala
+{
+	direction: rtl; width: 70%; background: hsla(359,74%,67%,1.00); float: left;
+}
+.sabad
+{
+	direction: rtl; width: 30%; background:hsla(97,83%,45%,1.00); float: right;
+}
+.kala .aks
+{
+	width: 40%; float: right; margin-left: 5%; text-align: center;
+}
+.kala a
+{
+	text-decoration: none; color: hsla(359,85%,47%,1.00);
 }
 .login
 {
@@ -129,4 +145,5 @@ body
 {
 	width: 90%; height: 800px; background: hsla(147,80%,61%,1.00); margin-right: 5%;
 }
+
 
