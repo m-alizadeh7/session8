@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <title>Untitled Document</title>
-	<script language="javascript" src="func.js"></script>
-	 <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+	<script language="javascript" src="../admin/func.js"></script>
+	 <link rel="stylesheet" type="text/css" href="../admin/css/stylesheet.css">
 </head>
 	
 	<?php
@@ -73,7 +73,7 @@
 		
 	 
 	?>
-	<form name="fmr" action="showuser.php" method="post" onSubmit=" return Cheack_Data()">
+	<form name="fmr" action="../admin/showuser.php" method="post" onSubmit=" return Cheack_Data()">
 		<table dir="rtl" align="center" width="50%">
 			<tr>
 				<td></td>
@@ -145,7 +145,7 @@
 	
 	?>
 	
-	<form name="fmr" action="add.php" method="post" onSubmit=" return Cheack_Data()">
+	<form name="fmr" action="../admin/add.php" method="post" onSubmit=" return Cheack_Data()">
 		<table dir="rtl" align="center" width="50%">
 			<tr>
 				<td>نام</td>
@@ -228,8 +228,8 @@
 			?>
 		</td>
 		<td><?php echo $rows["City"];?></td>
-		<td><a href="showuser.php?ide=<?php echo $rows['id'];?>">ویرایش</a></td>
-		<td><a href="showuser.php?idd=<?php echo $rows['id'];?>">حذف</a></td>
+		<td><a href="../admin/showuser.php?ide=<?php echo $rows['id'];?>">ویرایش</a></td>
+		<td><a href="../admin/showuser.php?idd=<?php echo $rows['id'];?>">حذف</a></td>
 	</tr>
 	<?php }
 		?>

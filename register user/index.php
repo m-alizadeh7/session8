@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <title>Untitled Document</title>
-	<script language="javascript" src="func.js"></script>
-	 <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+	<script language="javascript" src="../func.js"></script>
+	 <link rel="stylesheet" type="text/css" href="../css/stylesheet.css">
 </head>
 	
 	<?php
@@ -73,7 +73,7 @@
 		
 	 
 	?>
-	<form name="fmr" action="showuser.php" method="post" onSubmit=" return Cheack_Data()">
+	<form name="fmr" action="index.php" method="post" onSubmit=" return Cheack_Data()">
 		<table dir="rtl" align="center" width="50%">
 			<tr>
 				<td></td>
@@ -145,7 +145,7 @@
 	
 	?>
 	
-	<form name="fmr" action="add.php" method="post" onSubmit=" return Cheack_Data()">
+	<form name="fmr" action="../add.php" method="post" onSubmit=" return Cheack_Data()">
 		<table dir="rtl" align="center" width="50%">
 			<tr>
 				<td>نام</td>
@@ -190,46 +190,27 @@
 		</table>
 			   
 	</form>
-		 <?php } //else edit?>
+		 <?php } //else edit
+	?>
 	
-	<hr><hr>
-	<table dir="rtl" align="center" width="100%" border="1">
-		<tr>
-			<th colspan="9">لیست کاربران</th>
-		</tr>
-		<tr>
-			<th>کد</th>
-			<th>نام</th>
-			<th>نام خانوادگی</th>
-			<th>نام کاربری</th>
-			<th>کلمه عبور</th>
-			<th>جنسیت</th>
-			<th>محل تولد</th>
-			<th>ویرایش</th>
-			<th>حذف</th>
-		</tr>
+	
+	
+		
+	
 	
 	<?php 
 		$sql="select*from tbl_user";
 	$result=mysqli_query($connect,$sql);
 	while($rows=mysqli_fetch_array($result))
 	{ ?>
-	<tr>
-		<td><?php echo $rows["id"];?></td>
-		<td><?php echo $rows["Fname"];?></td>
-		<td><?php echo $rows["Lname"];?></td>
-		<td><?php echo $rows["Username"];?></td>
-		<td><?php echo $rows["Password"];?></td>
-		<td>
+	
 			<?php 
-			if($rows["Gender"]==0)
-				echo 'مرد';
-				else echo 'زن';
+			
 			?>
 		</td>
 		<td><?php echo $rows["City"];?></td>
-		<td><a href="showuser.php?ide=<?php echo $rows['id'];?>">ویرایش</a></td>
-		<td><a href="showuser.php?idd=<?php echo $rows['id'];?>">حذف</a></td>
+		
+		
 	</tr>
 	<?php }
 		?>

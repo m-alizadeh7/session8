@@ -19,7 +19,8 @@
 	}
 	if($result)
 	{
-		header("location:index.php?msg=1");
+		 header("location:index.php?msg=1"); 
+		
 	}
 	else 
 	{

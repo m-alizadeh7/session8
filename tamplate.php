@@ -7,6 +7,8 @@
 </head>
 
 <body>
+	
+	
 	<!-- start header -->
 	<div class="header">
 		<span class="title"><h1>فروشگاه بچه های ای تی</h1></span>
@@ -28,11 +30,15 @@
 			</li>
 			<li><a href="">درباره ما</a></li>
 			<li><a href="">تماس با ما</a></li>
-			<li ><a href="admin/index.php">ورود </a></li>
-			<li><a href="">ثبت نام </a></li>
+			<li></li>
+			<li><a href="register user/showregister.php" class="singin">ورود </a></li>
+			<li><a href="register user/index.php"  class="regestermenu">ثبت نام </a></li>
 		</ul>
 	</div>
 	<!-- end menu -->
+	
+}
+	
 	
 </body>
 </html>
