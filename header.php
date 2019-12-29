@@ -5,9 +5,9 @@
 <title> فروشگاه بچه های ای تی</title>
 	<!-- start header -->
 	<div class="header">
-		<span class="title">
+		<!--<span class="title">-->
 			<img src="images/همه چی کالا.gif">
-			</span>
+			<!--</span>-->
 			
 		<!--<span class="service"><h3>ارایه کننده محصولات فناوری اطلاعات</h3></span>
 		<span class="logo"><img src="images/Untitled-1.png"</span>-->
