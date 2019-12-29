@@ -8,6 +8,7 @@
 </head>
 
 <body>
+	
 	<div class="login">
 		<?php 
 			include "../funcs.php";

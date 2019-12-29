@@ -8,7 +8,8 @@
 </head>
 
 <body>
-	<?php include "tamplate.php" ?>
+	<?php include "header.php" ?>
+	<?php include "menu.php" ?>
 	
 	<!-- start content -->
 	<div class="content">
@@ -41,6 +42,6 @@
 		
 	</div>
 	<!-- end content -->
-	
+	<?php include "footer.php" ?>
 </body>
 </html>
