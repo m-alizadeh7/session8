@@ -107,6 +107,10 @@ body
 {
 	width: 98%; height: auto; background:hsla(0,22%,92%,1.00); margin-top:auto;
 }
+.content img
+{
+	width: 98%;
+}
 .footer
 {
 	width: 98%; height: 100px; background: hsla(0,3%,21%,1.00); float: right; margin-right: 5%; margin: auto; border-radius: 50px; 
@@ -121,7 +125,7 @@ body
 }
 .kala .aks
 {
-	width: 40%; float: right; margin-left: 5%; text-align: center;
+	width: 40%;  float: right; margin-left: 5%; text-align: center;
 }
 .kala a
 {
