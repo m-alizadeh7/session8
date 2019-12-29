@@ -15,7 +15,7 @@
 	<div class="content">
 	<span class="kala">
 			<span class="aks"><img src="images/kala/1422422_1764.jpg" width="300px" height="200px">
-				نام محصول: سس دلپذیر </br>قیمت :7000 تومان
+				نام محصول: سس دلپذیر </br>قیمت :7800 تومان
 					</br>
 				<a href="">افزودن به سبد خرید</a>		
 		</span>
@@ -27,12 +27,12 @@
 		</span>
 		<span class="kala">
 			<span class="aks"><img src="images/kala/۲۰۱۸۰۳۳۱_۱۶۰۹۲۹.jpg" width="300px" height="200px">
-				نام محصول: پنیر خامه ای صباح  </br>قیمت :7000 تومان
+				نام محصول: پنیر خامه ای صباح  </br>قیمت :3500 تومان
 					</br>
 				<a href="">افزودن به سبد خرید</a>
 			</span>
 			<span class="aks"><img src="images/kala/ترد.jpeg" width="300px" height="200px">
-				نام محصول: ترد مینو  </br>قیمت :7000 تومان
+				نام محصول: ترد مینو  </br>قیمت :1000 تومان
 					</br>
 				<a href="">افزودن به سبد خرید</a>
 			</span>

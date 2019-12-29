@@ -21,7 +21,7 @@ body
 }
 .header .title
 {
-	width: 40%;
+	width:auto;
 	height: 100% ;
 	float: right;
 	line-height: 100px;
@@ -58,7 +58,7 @@ body
 }
 .menu
 {
-	width: 98%;  height: 50px; background:hsla(233,88%,66%,1.00); margin: auto; border-radius: 50px; 
+	width: 98%;  height: 50px; background:hsla(233,88%,66%,1.00); margin-top:205px ;margin-right: 9px; border-radius: 5px; 
 	line-height: 50px;
 }
 .menu ul
@@ -101,7 +101,7 @@ body
 }
 .content
 {
-	width: 98%; height: auto; background: hsla(358,76%,82%,1.00); margin: auto;
+	width: 98%; height: auto; background:hsla(0,22%,92%,1.00); margin-top:auto;
 }
 .footer
 {
@@ -109,7 +109,7 @@ body
 }
 .kala
 {
-	direction: rtl; width: 70%; background: hsla(359,74%,67%,1.00); float: left;
+	direction: rtl; width: 70%; background:hsla(0,22%,92%,1.00); float: left;
 }
 .sabad
 {
