@@ -6,6 +6,7 @@
 </head>
 	<!-- start menu -->
 	<div class="menu">
+		<span>
 		<ul>
 			<li><a href="">صفحه اصلی</a></li>
 			
@@ -44,9 +45,15 @@
 			<li><a href="">درباره ما</a></li>
 			<li><a href="">تماس با ما</a></li>
 			<li></li>
-			<li><a href="register user/showregister.php" class="singin">ورود </a></li>
-			<li><a href="register user/index.php"  class="regestermenu">ثبت نام </a></li>
-		</ul>
+			<li></li>
+			<li></li>
+				</ul>
+				</span>
+			<span class="menuh">
+				<li><a href="register user/index.php"><input type="submit" name="loginUser" id="loginUser" value="ثبت نام" class="regestermenu"></a></li>
+				<li><a href="register user/showregister.php"><input type="submit" name="loginUser" id="loginUser" value="ورود " class="singin"></a></li>
+				</span>
+		
 	</div>
 	<!-- end menu -->
 

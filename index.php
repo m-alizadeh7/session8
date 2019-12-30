@@ -37,10 +37,15 @@
 				<a href="">افزودن به سبد خرید</a>
 			</span>
 	</span>
-		<span class="sabad">سبد</span>
-		<span></span>
+		
+<span class="sabad">
+ <span class="aks"><img src="images/کد-تخفیف-1.gif" width="300px" height="300px"></span> 
+			 <span class="aks"><img src="images/کد-تخفیف-1.gif" width="300px" height="300px"></span>
+</span>
+
 		
 	</div>
+
 	<!-- end content -->
 	<?php include "footer.php" ?>
 </body>

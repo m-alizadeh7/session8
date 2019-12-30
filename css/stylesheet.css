@@ -101,7 +101,15 @@ body
 }
 .menu .regestermenu
 {
-	background:hsla(359,93%,49%,1.00); margin-right: 10px; 
+	 margin-right: 10px; border-radius: 5px;
+}
+.menuh
+{
+	width: 46%;float: right; margin-right: 5px;
+}
+.menuh input
+{
+	width: 160px; height: 46px; border-radius: 2px; background: hsla(253,84%,61%,1.00)
 }
 .content
 {
@@ -121,7 +129,7 @@ body
 }
 .sabad
 {
-	direction: rtl; width: 30%; background:hsla(97,83%,45%,1.00); float: right;
+	direction: rtl; width: 30%; background:hsla(0,22%,92%,1.00); float: right; margin-top:-270px;
 }
 .kala .aks
 {
