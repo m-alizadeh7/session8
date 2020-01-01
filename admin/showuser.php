@@ -94,7 +94,7 @@
 			</tr>-->
 			<tr>
 				<td>پسورد</td>
-				<td><input type="text" name="txtp" id="txtp" value="<?php echo $rows["Password"];?>"></td>
+				<td><input type="password" name="txtp" id="txtp" value="<?php echo $rows["Password"];?>"></td>
 			</tr>
 			 <tr>
            		<td>جنسیت</td>
@@ -161,7 +161,7 @@
 			</tr>
 			<tr>
 				<td>پسورد</td>
-				<td><input type="text" name="txtp" id="txtp"></td>
+				<td><input type="password" name="txtp" id="txtp"></td>
 			</tr>
 			<tr>
            		<td>جنسیت</td>

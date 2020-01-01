@@ -14,6 +14,7 @@
 	
 	
 <body>
+	
 
 	<?php
 	if(isset($_GET["msg"]))
@@ -26,6 +27,42 @@
 		else 
 		echo ' خطا در ثبت نام';
 	}
+ 
+
+	if(isset($_POST["add"]))
+{
+	$n=$_POST["txtn"];
+	$f=$_POST["txtf"];
+	$u=$_POST["txtu"];
+	$p=$_POST["txtp"];
+	$j=$_POST["j"];
+	$c=$_POST["city"];
+	
+	include "funcs.php";
+	$sql1="select * from tbl_karbar where Username='$u'";
+	$res=mysqli_query($connect,$sql1);
+	$num=mysqli_num_rows($res);
+	if($num==0)
+	{
+	$sql="insert into tbl_karbar(Fname,Lname,Username,Password,Gender,City) value ('$n','$f','$u','$p','$j','$c')";
+	$result=mysqli_query($connect,$sql);
+	}
+	if($result)
+	{
+		/* header("location:index.php?msg=1"); */
+		
+	}
+	else 
+	{
+		/*header("location:index.php?msg=0");*/
+	}
+	}
+else
+{
+/*	header("location:index.php?msg=2");*/
+}
+
+	
 	if(isset($_POST["edit"]))
 	{
 		$id=$_POST["txtid"];
@@ -34,7 +71,7 @@
 		$p=$_POST["txtp"];
 		$j=$_POST["j"];
 		$c=$_POST["city"];
-	    $sql=" update tbl_user set Fname='$n', Lname='$f', Password='$p', Gender='$j', City='$c' where id='$id' ";
+	    $sql=" update tbl_karbar set Fname='$n', Lname='$f', Password='$p', Gender='$j', City='$c' where id='$id' ";
 		$result=mysqli_query($connect,$sql);
 		if($result)
 		{
@@ -52,7 +89,7 @@
 		if(isset($_GET["idd"]))  //delete
 		  {
 			$id=$_GET["idd"];
-			$sql="delete from tbl_user where id='$id'";
+			$sql="delete from tbl_karbar where id='$id'";
 			$result=mysqli_query($connect,$sql);
 			if ($result)
 			{
@@ -66,7 +103,7 @@
 	if (isset($_GET["ide"]))
 	{
 		$id=$_GET["ide"];
-		$sql="select * from tbl_user where id='$id'";
+		$sql="select * from tbl_karbar where id='$id'";
 		$result=mysqli_query($connect,$sql);
 		$rows=mysqli_fetch_array($result);
 		$idCity=$rows["City"];
@@ -145,7 +182,7 @@
 	
 	?>
 	
-	<form name="fmr" action="../add.php" method="post" onSubmit=" return Cheack_Data()">
+	<form name="fmr" action="" method="post" onSubmit=" return Cheack_Data()">
 		<table dir="rtl" align="center" width="50%">
 			<tr>
 				<td>نام</td>
@@ -199,7 +236,7 @@
 	
 	
 	<?php 
-		$sql="select*from tbl_user";
+		$sql="select*from tbl_karbar";
 	$result=mysqli_query($connect,$sql);
 	while($rows=mysqli_fetch_array($result))
 	{ ?>

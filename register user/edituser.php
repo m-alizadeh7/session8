@@ -35,7 +35,7 @@
 		$p=$_POST["txtp"];
 		$j=$_POST["j"];
 		$c=$_POST["city"];
-	    $sql=" update tbl_user set Fname='$n', Lname='$f', Password='$p', Gender='$j', City='$c' where id='$id' ";
+	    $sql=" update tbl_karbar set Fname='$n', Lname='$f', Password='$p', Gender='$j', City='$c' where id='$id' ";
 		$result=mysqli_query($connect,$sql);
 		if($result)
 		{
@@ -53,7 +53,7 @@
 		if(isset($_GET["idd"]))  //delete
 		  {
 			$id=$_GET["idd"];
-			$sql="delete from tbl_user where id='$id'";
+			$sql="delete from tbl_karbar where id='$id'";
 			$result=mysqli_query($connect,$sql);
 			if ($result)
 			{
@@ -67,14 +67,14 @@
 	if (isset($_GET["ide"]))
 	{
 		$id=$_GET["ide"];
-		$sql="select * from tbl_user where id='$id'";
+		$sql="select * from tbl_karbar where id='$id'";
 		$result=mysqli_query($connect,$sql);
 		$rows=mysqli_fetch_array($result);
 		$idCity=$rows["City"];
 		
 	 
 	?>
-	<form name="fmr" action="../admin/showuser.php" method="post" onSubmit=" return Cheack_Data()">
+	<form name="fmr" action="edituser.php" method="post" onSubmit=" return Cheack_Data()">
 		<table dir="rtl" align="center" width="50%">
 			<tr>
 				<td></td>
@@ -146,7 +146,7 @@
 	
 	?>
 	
-	<form name="fmr" action="../admin/add.php" method="post" onSubmit=" return Cheack_Data()">
+	<form name="fmr" action="edituser.php" method="post" onSubmit=" return Cheack_Data()">
 		<table dir="rtl" align="center" width="50%">
 			<tr>
 				<td>نام</td>
@@ -211,7 +211,7 @@
 		</tr>
 	
 	<?php 
-		$sql="select*from tbl_user";
+		$sql="select*from tbl_karbarr";
 	$result=mysqli_query($connect,$sql);
 	while($rows=mysqli_fetch_array($result))
 	{ ?>
@@ -229,8 +229,8 @@
 			?>
 		</td>
 		<td><?php echo $rows["City"];?></td>
-		<td><a href="../admin/showuser.php?ide=<?php echo $rows['id'];?>">ویرایش</a></td>
-		<td><a href="../admin/showuser.php?idd=<?php echo $rows['id'];?>">حذف</a></td>
+		<td><a href="edituser.php?ide=<?php echo $rows['id'];?>">ویرایش</a></td>
+		<td><a href="edituser.php?idd=<?php echo $rows['id'];?>">حذف</a></td>
 	</tr>
 	<?php }
 		?>

@@ -16,7 +16,7 @@
 		{
 			$u=$_POST["txtu"];
 			$p=$_POST["txtp"];
-			$sql= "select * from tbl_user where (username='$u' and password='$p')";
+			$sql= "select * from tbl_karbar where (username='$u' and password='$p')";
 			$result=mysqli_query($connect,$sql);
 			$num=mysqli_num_rows($result);
 			if ($num>0)

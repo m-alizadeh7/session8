@@ -62,7 +62,7 @@ body
 }
 .menu
 {
-	width: 98%;  height: 50px; background:hsla(233,88%,66%,1.00); margin-top:160px ;margin-right: 9px; border-radius: 5px; 
+	width: 98%;  height: 50px; background:hsla(358,67%,92%,1.00); margin-top:160px ;margin-right: 9px; border-radius: 5px; 
 	line-height: 50px;
 }
 .menu ul
@@ -71,13 +71,14 @@ body
 }
 .menu ul li
 {
+	
 	float: right; 
 	margin-left: 30px;
 }
 .menu a
 {
 	text-decoration: none;
-	color: white;
+	color:hsla(359,87%,53%,1.00);
 }
 .menu li :hover a
 {
@@ -88,8 +89,8 @@ body
 	display: none;
 	position: absolute;
 	width: 120px;
-	background: hsla(97,80%,60%,1.00);
-	margin-right: -30;
+	background:hsla(0,22%,92%,1.00);
+	margin-right: -30; color: hsla(359,91%,51%,1.00);
 }
 .menu li:hover ul
 {
@@ -99,6 +100,7 @@ body
 {
 	background:hsla(359,93%,49%,1.00); border: medium;
 }
+
 .menu .regestermenu
 {
 	 margin-right: 10px; border-radius: 5px;
@@ -121,15 +123,15 @@ body
 }
 .footer
 {
-	width: 98%; height: 100px; background: hsla(0,3%,21%,1.00); float: right; margin-right: 5%; margin: auto; border-radius: 50px; 
+	width: 98%; height: 100px; background: hsla(0,3%,21%,1.00); float: right; margin-right: 5%; margin: auto; border-radius: 3px; 
 }
 .kala
 {
 	direction: rtl; width: 70%; background:hsla(0,22%,92%,1.00); float: left;
 }
-.sabad
+.worod
 {
-	direction: rtl; width: 30%; background:hsla(0,22%,92%,1.00); float: right; margin-top:-270px;
+	direction: rtl; width: 30%; background:hsla(0,22%,92%,1.00); float: right; margin-top:auto;
 }
 .kala .aks
 {
