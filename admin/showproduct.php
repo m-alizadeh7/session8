@@ -32,7 +32,7 @@
 		if($result)
 		  {
 			
-			move_uploaded_file($_FILES['aks']['tmp_name'],"../images/product".$aksh) or die ("cannot move picture");
+			move_uploaded_file($_FILES['aks']['tmp_name'],"../images/product/".$aksh) or die ("cannot move picture");
 			
 				echo 'اطلاعات کالا با مئوفقیت ثبت گردید';
 			}
@@ -67,7 +67,7 @@
 			$res=mysqli_query($connect,$sql);
 			if($res)
 			{
-					move_uploaded_file($_FILES['aks']['tmp_name'],"../images/product".$aksh) or die ("cannot move picture");
+					move_uploaded_file($_FILES['aks']['tmp_name'],"../images/product/".$aksh) or die ("cannot move picture");
 				unlink("../images/product/".$aksold);
 				echo 'رکورد شما با موفقیت ویرایش شد';
 			}
@@ -127,7 +127,7 @@
 		}
 	if (isset($_GET["ide"]))
 	{
-		$id=$_GET["ide"];
+		$id=$_GET['ide'];
 		$aksold=$_GET["ide"];
 		$sql="select * from tbl_kala where id='$id'";
 		$result=mysqli_query($connect,$sql);

@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!doctype html>
 <html>
 <head>
@@ -25,7 +26,7 @@
 		{ ?>	
 		
 		<span class="aks">
-			<img src="images/kala/<?php echo $rows1["aks"];?>" width="300px" height="200px"><br>
+			<img src="images/product/<?php echo $rows1["aks"];?>" width="300px" height="200px"><br>
 			نام محصول:<?php echo $rows1["name"];?>
 		<br>
 			قیمت محصول:<?php echo $rows1["price"];?>			
@@ -39,7 +40,7 @@
 		{ ?>	
 		
 		<span class="aks">
-			<img src="images/kala/<?php echo $rows2["aks"];?>" width="300px" height="200px"><br>
+			<img src="images/product/<?php echo $rows2["aks"];?>" width="300px" height="200px"><br>
 			نام محصول:<?php echo $rows2["name"];?>
 		<br>
 			قیمت محصول:<?php echo $rows2["price"];?>
