@@ -19,7 +19,7 @@
 	<!-- start menu -->
 	<div class="menu">
 		<ul>
-			<li><a href="">صفحه اصلی</a></li>
+			<li><a href="index.php">صفحه اصلی</a></li>
 			<li><a href="">محصولات</a>
 				<ul>
 					<li>دیجیتال</li>
