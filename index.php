@@ -42,7 +42,7 @@ if(isset($_SESSION["sid"]))
 		<br>
 			قیمت محصول:<?php echo $rows1["price"];?>			
 		</br>
-		<a href="addsabad.php?id=<?php echo $rows1['id']; ?>">افزودن به سبد خرید</a>		
+		<a href="addsabad.php?id=<?php echo $rows1['id']; ?> ">افزودن به سبد خرید</a>		
 		</span>
 				
 	<?php } // if rows1
@@ -64,7 +64,8 @@ if(isset($_SESSION["sid"]))
 	</span>
 <!--<span class="worod">-->
 	<span class="sabad">
-		<table border="1" width="100%">
+		
+		<table border="1" width="30%">
 			<tr><th colspan="3">سبد سفارش شما</th></tr>
 			<tr>
 				<td>کد</td>
@@ -83,18 +84,17 @@ if(isset($_SESSION["sid"]))
 			<td><?php echo $rows["name"]; ?></td>
 			<td><a href="delsabad.php?id=<?php echo $rows['id1'];?>">حذف</a></td>
 		</tr>
-			<tr><td></td></tr>
+			
 			<?php } ?>
-	</table>
-		<tr>
+			<tr>
 			<td><a href="showfactor.php?sid=<?php echo $sid; ?>">نهایی کردن سفارش</a></td>
 		</tr>
-	</span>
-	<!--<span>
-	 <span class="aks"><img src="images/کد-تخفیف-1.gif" width="200px" height="200px"></span> 
-			 <span class="aks"><img src="images/مناطق-تحت-پوشش2.jpg" width="200px" height="200px"></span>
+	</table>
 		
-	</span>-->
+		<span ><img src="images/کد-تخفیف-1.gif" width="30%" height="200px"></span> 
+		<span ><img src="images/مناطق-تحت-پوشش2.jpg" width="30%" height="200px"></span>
+	</span>
+	
 		
 	</div>
 	<!-- end content -->

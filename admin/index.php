@@ -4,10 +4,13 @@
 <head>
 <meta charset="utf-8">
 <title> مدیریت پنل</title>
-	<link rel="stylesheet" type="text/css" href="../css/stylesheet.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
+	<div class=welcome>
+<ul><h1>به صفحه ورود به پنل ادمین خوش آمدید</h1></ul>
+	</div>
 	
 	<div class="login">
 		<?php 
@@ -35,8 +38,8 @@
 		?>
 		<div class="myfrom">
 		<form name="frm" method="post" action="">
-			<input type="text" name="txtu" id="txtu" required placeholder="نام کاربری" size="50%"><br>
-			<input type="password" name="txtp" id="txtp" placeholder="کلمه عبور" size="50%"><br>
+			<input type="text" name="txtu" id="txtu" required placeholder="نام کاربری" size="30%"><br>
+			<input type="password" name="txtp" id="txtp" placeholder="کلمه عبور" size="30%"><br>
 			<input type="submit" value="ورود" name="send" width="100%">
 			
 			

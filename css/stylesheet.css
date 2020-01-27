@@ -82,7 +82,7 @@ body
 }
 .menu li :hover a
 {
-	color: yellow;
+	color:hsla(248,83%,54%,1.00);
 }
 .menu li ul
 {
@@ -123,7 +123,23 @@ body
 }
 .footer
 {
-	width: 98%; height: 100px; background: hsla(0,3%,21%,1.00); float: right; margin-right: 5%; margin: auto; border-radius: 3px; 
+	width: 98%; height:auto; background: hsla(0,3%,21%,1.00); float: right; margin-right: 5%; margin: auto; border-radius: 3px; 
+}
+.footer ul
+{
+	list-style: none; color: white;
+}
+.footer .ftozih
+{
+	width: 30%; direction: rtl; color: white; background: hsla(359,97%,70%,1.00);
+}
+.footer .ftamas
+{
+	width: 300px; direction: rtl; color: white; background: hsla(108,68%,27%,1.00);
+}
+.footer .femail
+{
+	width: 30%; direction: rtl; color: white;
 }
 .kala
 {
@@ -141,14 +157,13 @@ body
 {
 	text-decoration: none; color: hsla(359,85%,47%,1.00);
 }
-.login
+.sabad
 {
-	width: 40%; height: 200px; margin: auto; background:hsla(359,85%,52%,1.00);
-	
+	width: 30%;
 }
-.myfrom
+.sabad img
 {
-	width: 100%; margin-top: 10px; margin-right: 100px;line-height: 50px;
+	width: 30%;
 }
 .welcome
 {
