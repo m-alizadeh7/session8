@@ -1,5 +1,9 @@
 <?php 
-session_start(); 
+session_start();
+if(isset($_GET["msg"]))
+{
+	unset($_SESSION["sid"]);
+}
 if(isset($_SESSION["sid"]))
 {
 	$_SESSION["sid"]=session_id();
@@ -69,8 +73,8 @@ if(isset($_SESSION["sid"]))
 			</tr>
 		
 		<?php
-			$sid=$_SESSION["sid"];
-		$sql=" select tbl_kala.id ,name, tbl_order.id as id1 ,idk from tbl_order,tbl_kala where (sid='$sid' and tbl_order.idk=tbl_kala.id )";
+		$sid=$_SESSION["sid"];
+		$sql=" select tbl_kala.id ,name, tbl_order.id as id1 , status ,idk from tbl_order,tbl_kala where (sid='$sid' and tbl_order.idk=tbl_kala.id and status=0)";
 		$result=mysqli_query($connect,$sql);
 		while($rows=mysqli_fetch_array($result))
 		{?>
@@ -79,11 +83,15 @@ if(isset($_SESSION["sid"]))
 			<td><?php echo $rows["name"]; ?></td>
 			<td><a href="delsabad.php?id=<?php echo $rows['id1'];?>">حذف</a></td>
 		</tr>
+			<tr><td></td></tr>
 			<?php } ?>
 	</table>
-		<a href="showfactor.php?sid=<?php echo $sid; ?>">نهایی کردن سفارش</a>
+		<tr>
+			<td><a href="showfactor.php?sid=<?php echo $sid; ?>">نهایی کردن سفارش</a></td>
+		</tr>
 	</span>
-	<!-- <span class="aks"><img src="images/کد-تخفیف-1.gif" width="200px" height="200px"></span> 
+	<!--<span>
+	 <span class="aks"><img src="images/کد-تخفیف-1.gif" width="200px" height="200px"></span> 
 			 <span class="aks"><img src="images/مناطق-تحت-پوشش2.jpg" width="200px" height="200px"></span>
 		
 	</span>-->

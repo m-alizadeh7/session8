@@ -22,6 +22,7 @@
 			<li><a href="showuser.php" target="myframe">مدیریت کاربران</a></li>
 			<li><a href="showcat.php" target="myframe">دسته بدی کالا </a></li>
 			<li><a href="showproduct.php" target="myframe">مدیریت کالا </a></li>
+			<li><a href="showorder.php" target="myframe"> مدیریت سفارشات </a></li>
 			
 			
 		</ul>

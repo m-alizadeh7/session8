@@ -8,6 +8,8 @@
 	<div class="menu">
 		<!--<span>-->
 		<ul>
+			<?php
+			 ?>
 			<li><a href="">صفحه اصلی</a></li>
 			
 			<li><a href="">مواد غذایی</a>
