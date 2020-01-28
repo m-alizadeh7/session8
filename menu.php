@@ -3,24 +3,60 @@
 <head>
 <meta charset="utf-8">
 <title>Untitled Document</title>
+	
 </head>
+	<body>
+		<?php include "funcs.php"; ?>
+	
+		
 	<!-- start menu -->
 	<div class="menu">
-		<!--<span>-->
+		<span>
 		<ul>
-			<?php
-			 ?>
-			<li><a href="">صفحه اصلی</a></li>
 			
-			<li><a href="">مواد غذایی</a>
+			<li>
+				<a href="index.php">صفحه اصلی</a></li>
+			
+			<?php /*?><li><a href="">محصولات </a>
 				<ul>
-					<li><a href="">حبوبات</li>
-					<li><a href="">کنسرو جات </li>
-					<li>پروتئینی<a href=""> </li>
-					<li><a href="">سایر </li>
-				</ul>
+					<?php 
+					$sql="select * from tbl_cat";
+					$result=mysqli_query($connect,$sql);
+					while($rows=mysqli_fetch_array($result))
+					{?>
+					<li><a href=""><?php echo $rows["catname"]; ?></a></li>
+				
+						<?php }?>
+						</ul>
+			</li><?php */?>
+			<li><a href="">محصولات </a>
+				<ul>
+					<?php 
+					$sql="select * from tbl_cat";
+					$result=mysqli_query($connect,$sql);
+					while($rows=mysqli_fetch_array($result))
+					{?>
+					<li><a href="index.php?idc=<?php echo $rows['id'];?>"><?php echo $rows["catname"]; ?></a></li>
+				
+						<?php }?>
+						</ul>
 			</li>
-			<li><a href="">نوشیدنی </a>
+			<ul>
+			<li><a href="text/darbare.html">درباره ما</a></li>
+			<li><a href="#footer">تماس با ما</a></li>
+			<li></li>
+			<li></li>
+			<li></li>
+				</ul>
+			</span>
+			
+			<span class="menuh">
+				<li><a href="register user/index.php"><input type="submit" name="loginUser" id="loginUser" value="ثبت نام" class="regestermenu" width=""></a></li>
+				<li><a href="admin/index.php"><input type="submit" name="loginUser" id="loginUser" value="ورود " class="singin"></a></li>
+			</span>	
+		
+	</div>
+			<!--<li><a href="">نوشیدنی </a>
 				<ul>
 					<li>نوشابه<a href=""></li>
 					<li><a href=""> دلستر </li>
@@ -43,23 +79,14 @@
 					<li><a href="">سایر </li>
 				</ul>
 			</li>
-			<ul>
-			<li><a href="">درباره ما</a></li>
-			<li><a href="">تماس با ما</a></li>
-			<li></li>
-			<li></li>
-			<li></li>
-				</ul>
+			
 				<!--</span>-->
-			<span class="menuh">
-				<li><a href="register user/index.php"><input type="submit" name="loginUser" id="loginUser" value="ثبت نام" class="regestermenu" width=""></a></li>
-				<li><a href="register user/showregister.php"><input type="submit" name="loginUser" id="loginUser" value="ورود " class="singin"></a></li>
-				</span>
+			
 		
-	</div>
+	<!--</div>-->
 	<!-- end menu -->
 
-<body>
+
 	
 </body>
 </html>

@@ -28,7 +28,15 @@ if(isset($_SESSION["sid"]))
 	<div class="content">
 	<span class="kala">
 		<?php
+	if(isset($_GET["idc"]))
+	{
+		$idc=$_GET["idc"];
+		$sql="select * from tbl_kala where idc='$idc'";
+	}
+	else
+	{
 	$sql="select * from tbl_kala";
+	}
 	$res=mysqli_query($connect,$sql);
 	while($rows1=mysqli_fetch_array($res))
 	{
@@ -75,10 +83,10 @@ if(isset($_SESSION["sid"]))
 		
 		<?php
 		$sid=$_SESSION["sid"];
-		$sql=" select tbl_kala.id ,name, tbl_order.id as id1 , status ,idk from tbl_order,tbl_kala where (sid='$sid' and tbl_order.idk=tbl_kala.id and status=0)";
+		$sql="select tbl_kala.id ,name, tbl_order.id as id1 , status ,idk from tbl_order,tbl_kala where (sid='$sid' and tbl_order.idk=tbl_kala.id and status=0)";
 		$result=mysqli_query($connect,$sql);
 		while($rows=mysqli_fetch_array($result))
-		{?>
+		{ ?>
 		<tr>
 			<td><?php echo $rows["id1"]; ?></td>
 			<td><?php echo $rows["name"]; ?></td>
@@ -91,8 +99,8 @@ if(isset($_SESSION["sid"]))
 		</tr>
 	</table>
 		
-		<span ><img src="images/کد-تخفیف-1.gif" width="30%" height="200px"></span> 
-		<span ><img src="images/مناطق-تحت-پوشش2.jpg" width="30%" height="200px"></span>
+		<span ><a href=""><img src="images/کد-تخفیف-1.gif" width="30%" height="200px"></a></span> 
+		<span ><a href=""><img src="images/مناطق-تحت-پوشش2.jpg" width="30%" height="200px"></a></span>
 	</span>
 	
 		

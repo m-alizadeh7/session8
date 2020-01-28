@@ -105,10 +105,11 @@ body
 {
 	 margin-right: 10px; border-radius: 5px;
 }
-.menuh
+.menu .menuh
 {
-	width: 46%;float: right; margin-right: 5px;
+	width: 40%; height: auto; float: right; direction: rtl; color: white;
 }
+
 .menuh input
 {
 	width: 160px; height: 46px; border-radius: 2px; background: hsla(253,84%,61%,1.00)
@@ -123,7 +124,7 @@ body
 }
 .footer
 {
-	width: 98%; height:auto; background: hsla(0,3%,21%,1.00); float: right; margin-right: 5%; margin: auto; border-radius: 3px; 
+	width: 98%; height:auto; background: hsla(0,3%,21%,1.00); float: right; margin-right: 10px; margin: auto; border-radius: 5px; 
 }
 .footer ul
 {
@@ -131,15 +132,19 @@ body
 }
 .footer .ftozih
 {
-	width: 30%; direction: rtl; color: white; background: hsla(359,97%,70%,1.00);
+	width: 32%; height: auto; float: right; direction: rtl; color: white;
 }
 .footer .ftamas
 {
-	width: 300px; direction: rtl; color: white; background: hsla(108,68%,27%,1.00);
+	width: 32%; height: auto; float: right; direction: rtl; color: white;
 }
 .footer .femail
 {
-	width: 30%; direction: rtl; color: white;
+	width: 34%; height: auto; float: right; direction: rtl; color: white;
+}
+.femail a
+{
+	text-decoration: none; color: white;
 }
 .kala
 {
@@ -195,5 +200,8 @@ body
 	width: 30%; height: 200px; margin: auto; background:hsla(233,90%,50%,1.00);
 }
 
-
+.darbare
+{
+	width: 100%; height: auto; direction: rtl; background: hsla(359,78%,82%,1.00); color: blue;
 }
+

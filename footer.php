@@ -8,33 +8,78 @@
 </head>
 
 <body>
+	<a href="#jjj"></a>
 	<!-- start footer -->
 	<div class="footer">
 		<span class="ftozih" >
-		<table dir="rtl" align="center">
+		<!--<table dir="rtl" align="center">-->
 			<ul>
-				<li>این فروشگاه در حال تست می باشد</li>
+				<li>پیاده سازی مدل های تجاری</li><br>
+				<li>مدرس استاد سالاری</li><br>
+				<li>دانشجو:اسماعیل جعفری</li>
+					
 			</ul>
-			</table>
+			<!--</table>-->
 		</span>
 		<!--end span ftozih-->
 		<span class="ftamas">
-			<table dir="rtl" align="center">
+			<!--<table dir="rtl" align="center">-->
 			<ul>
-				<li>شماره تماس:<br>09396506246</li>
+				<li>زبان های مورد استفاده :<br>html5<br>Css<br>javascript<br>
+				php
+				</li>
 			</ul>
-			</table>
+			<!--</table>-->
 		</span>
 		<!--end span ftamas-->
 		<span class="femail">
 			<table dir="rtl" align="center">
 			<ul>
-				<li>این فروشگاه در حال تست می باشد</li>
+				<a href="jafaryesmaeil340@gmail.com"><li>email:jafaryesmaeil340@gmail.com</li></a>
+				<a href="jafaryesmaeil340@yahoo.com.com"><li>email:jafaryesmaeil340@yahoo.com</li></a>
 			</ul>
 			</table>
+			
 		</span>
 		<!--end span ftozih-->
 	</div>
 	<!-- end footer -->
-</body>
+	
+
+	<!--
+	<div id="block"></div>
+		
+<a href="#block">رفتن به بالای صفحه</a>
+	
+	<style type="text/css">
+body{
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 12px;
+    direction: rtl;
+}
+.block{
+    display: block;
+    height: 1500px;
+    width: 80%;
+    color: #FFFFFF;
+    background-color: #528CDB;
+    border:1px solid #2C40B4;
+    clear: both;
+    padding: 4px;
+    margin-left: auto;
+    margin-right: auto;
+}
+a{
+    text-decoration:none;
+}
+</style>
+</head>
+
+<div id="block" class="block">برای تست کد، به پائین صفحه اسکرول کنید!</div>
+<a href="#block">&uarr; رفتن به بالای صفحه</a>
+	
+
+
+	<div id="down"></div>-->
+	
 </html>
