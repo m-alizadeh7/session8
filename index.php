@@ -11,7 +11,7 @@
 	include "./funcs.php";
 	include "./header.php";
  ?>
-	<title>فروشگاه چعفری</title>
+	<title>فروشگاه جعفری</title>
 	</head>
 <!-- Start body-->	
 <body>
