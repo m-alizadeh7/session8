@@ -1,18 +1,16 @@
-<?php session_start(); ?>
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
+<?php session_start();
+	  include "./funcs.php";
+	  include "./header.php";
+?>
 <title>پنل مدیریت</title>
-	<link rel="stylesheet" type="text/css" href="../css/stylesheet.css">
 </head>
-
+<!-- end head-->
 <body>
-	
-	<?php 
+<?php	  include "./menu.php"; ?>
+	<?php
 		if (isset($_SESSION["login"]))
 		{?>
-	
+
 	<div class="welcome">
 		<span class="user">کاربر محترم:&nbsp; <?php echo $_SESSION["user"];?>&nbsp; خوش آمدید</span>
 		<span class="exit"><a href="exit.php"><img src="../images/64_logout.png"></a></span>
@@ -24,8 +22,8 @@
 			<li><a href="showproduct.php" target="myframe">مدیریت کالا </a></li>
 			<li><a href="showorder.php" target="myframe"> مدیریت سفارشات </a></li>
 			 <li><a href="showorderb.php" target="myframe">سفارشات بایگانی شده</a></li>
-			
-			
+
+
 		</ul>
 	</div>
 	<iframe name="myframe" id="myframe" class="myframe"></iframe>
@@ -33,7 +31,7 @@
 		}
 	else
 	{
-		echo 'شما کاربر مجاز نیستید';
+		echo '<h1 >شما اجازه دسترسی به این صفحه را ندارید</h1>';
 	}
 	?>
 </body>

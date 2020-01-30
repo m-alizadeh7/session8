@@ -1,20 +1,21 @@
-<?php session_start(); ?>
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<title> مدیریت پنل</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+<?php session_start();
+	  include "./funcs.php";
+	  include "./header.php"; 
+?>
+<title>پنل مدیریت </title>
 </head>
+<!-- end head-->
+<body>
+<?php	  include "./menu.php"; ?>
 
 <body>
 	<div class=welcome>
-<ul><h1>به صفحه ورود به پنل ادمین خوش آمدید</h1></ul>
+	<ul><h1>به صفحه ورود به پنل ادمین خوش آمدید</h1></ul>
 	</div>
 	
 	<div class="login">
 		<?php 
-			include "../funcs.php";
+		
 			
 		if (isset($_POST["send"]))
 		{
@@ -46,5 +47,4 @@
 		</form>
 			</div>
 	</div>
-</body>
-</html>
+<?php include "../footer.php" ?>

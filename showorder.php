@@ -1,24 +1,17 @@
- <!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>مدیریت دسته ها و کالا ها</title>
-	<script language="javascript" src="func.js"></script>
-	 <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+<?php
+	  include "./funcs.php";
+	  include "./header.php";
+?>
+<title> مدیریت</title>
 </head>
-	<?php
-		include "../funcs.php";
-		
-	?>
-	
+<!-- end head-->
 <body>
-	
+<?php	  include "./menu.php"; ?>
+<?php
 
-	<?php
 
-	
-	
-		
+
+
 		if(isset($_GET["idd"]))  //delete
 		  {
 			$id=$_GET["idd"];
@@ -26,7 +19,7 @@
 			$result=mysqli_query($connect,$sql);
 			if ($result)
 			{
-				
+
 				echo '<div style="color:red; text-align:center;">رکورد با موفقیت حذف شد</div>';
 			}
 			else
@@ -49,7 +42,7 @@
 				<td>قیمت</td>
 				<td> قیمت کل</td>
 			</tr>
-			<?php 
+			<?php
 				$sql="select tbl_kala.id as id1,name,price,tbl_order.id as id2,tbl_order.qty as q,idk from tbl_order,tbl_kala where (sid='$sid' and tbl_order.idk=tbl_kala.id)";
 		$result=mysqli_query($connect,$sql);
 		$i=1;
@@ -64,20 +57,20 @@
 			<td><?php echo $rows["q"];?></td>
 			<td><?php echo $rows["price"];?></td>
 			<td><?php echo $rows["price"]*$rows["q"];?></td>
-			
-		</tr>	
+
+		</tr>
 		<?php } ?>
 			<tr>
 				<td colspan="2">جمع کل:</td><td colspan="3"><?php echo $sum;?></td>
 			</tr>
-			
+
 		</table>
 	<?php } ?>
-	
-		
-		
-	
-	
+
+
+
+
+
 	<hr><hr>
 	<table dir="rtl" align="center" width="100%" border="1">
 		<tr>
@@ -92,8 +85,8 @@
         <th>بایگانی</th>
         <th>جزئیات</th>
 		</tr>
-	
-	<?php 
+
+	<?php
 		$sql="select * from tbl_factor where status=0";
 	$result=mysqli_query($connect,$sql);
 	while($rows=mysqli_fetch_array($result))
@@ -103,14 +96,13 @@
 		<td><?php echo $rows["coder"];?></td>
 		<td><?php echo $rows["sid"];?></td>
 		<td><?php echo $rows["dateins"];?></td>
-		
-		
-		
+
+
+
 		<td><a href="showorder.php?idd=<?php echo $rows['id']; ?>">حذف</a></td>
          <td><a href="showorder.php?sidb=<?php echo $rows['sid']; ?>">بایگانی</a></td>
          <td><a href="showorder.php?sid=<?php echo $rows['sid']; ?>">جزئیات</a></td>
 	</tr>
 	<?php }?>
 </table>
-</body>
-</html>
+<?php include "./footer.php" ?>

@@ -4,10 +4,14 @@
 	{
 	$_SESSION["sid"]=session_id();
 	}
-?>
-<!doctype html>
-<html>
-<head>
+	include "./funcs.php";
+	include "./header.php";
+	?>
+	<title>نمایش فاکتور</title>
+	</head>
+	<!-- end head-->
+	<body>
+	<?php	  include "./menu.php"; ?>
 <script>
 function changeprice()
 {
@@ -24,7 +28,7 @@ function changeprice()
   sum=sum+parseInt(p2[i].value);
   document.getElementById("sump").innerHTML="[جمع کل فاکتور:]+sum+"  ریال";
  }
- 
+
 }
 </script>
 <meta charset="utf-8">
@@ -47,7 +51,7 @@ function changeprice()
          $sid=$_GET["sid"];
 		 ?>
          <form name="frm" action="updatesabad.php" method="post">
-         <table border="10" width="60%" align="center" dir="rtl">  
+         <table border="10" width="60%" align="center" dir="rtl">
          	<tr><th colspan="5" style="color:blue">فاکتور فروش شما </th></tr>
             <tr style="background:#83bcf1">
             	<th>ردیف</th>
@@ -80,9 +84,9 @@ function changeprice()
          </form>
          <?php
 	   }
-	  ?> 
+	  ?>
     <div style="color:red; font-size:16px; margin-right:64%" id="sump"></div>
-    <br><br> 
+    <br><br>
     </div>
         <?php
 			include "footer.php";

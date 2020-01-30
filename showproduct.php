@@ -1,18 +1,12 @@
- <!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>Untitled Document</title>
-	<script language="javascript" src="func.js"></script>
-	 <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+<?php
+	  include "./funcs.php";
+	  include "./header.php";
+?>
+<title> مدیریت</title>
 </head>
-	<?php
-		include "../funcs.php";
-		
-	?>
-	
+<!-- end head-->
 <body>
-	
+<?php	  include "./menu.php"; ?>
 
 	<?php
 	if (isset($_POST["add"]))
@@ -31,9 +25,9 @@
 		$result=mysqli_query($connect,$sql);
 		if($result)
 		  {
-			
+
 			move_uploaded_file($_FILES['aks']['tmp_name'],"../images/product/".$aksh) or die ("cannot move picture");
-		
+
 				echo 'اطلاعات کالا با مئوفقیت ثبت گردید';
 			}
 		else
@@ -45,9 +39,9 @@
 			{
 			echo 'عکس از نوع استاندارد وارد کنید';
 			}
-	
+
 	}
-		
+
 	if(isset($_POST["edit"]))
 	{
 		$id=$_POST["txtid"];
@@ -77,16 +71,16 @@
 				echo 'خطا در ویرایش رکورد';
 			}
 		}
-		
+
 		$password=array("image/jpeg","image/gif","image/png","image/jpg");
-				
+
 	    $sql=" update tbl_cat set catname='$n' where id='$id' ";
 		$result=mysqli_query($connect,$sql);
 		if($result)
 		{
 			echo 'رکورد با موفقیت ویرایش گردید';
 		}
-		
+
 		else
 		{
 			echo 'خطا در ثبت ویرایش';
@@ -98,7 +92,7 @@
 			$res=mysqli_query($connect,$sql);
 			if($res)
 			{
-					
+
 				unlink("../images/product/".$aksold);
 				echo 'رکورد شما با موفقیت ویرایش شد';
 			}
@@ -108,8 +102,8 @@
 			}
 		}
 	}
-	
-		
+
+
 		if(isset($_GET["idd"]))  //delete
 		  {
 			$id=$_GET["idd"];
@@ -135,7 +129,7 @@
 		$rows=mysqli_fetch_array($result);
 		$idc=$row['idc'];
 		/*معمم*/
-		
+
 	?>
 	<form name="fmr" action="showproduct.php" method="post" enctype="multipart/form-data">
 		<table dir="rtl" align="center" width="50%">
@@ -144,24 +138,24 @@
 				<td><input type="hidden" name="aksold" id="aksold" value="<?php echo $aksold ?>"></td>
 				<td><input type="hidden" name="txtid" id="txtid" value="<?php echo $id; ?>"> " " </td>
 			</tr>
-			
+
 			<tr>
 				<td>نام دسته</td>
 				<td>
 				<select name="cat" id="cat">
 					<option value="0">لطفا انتخاب کنید</option>
-				
-				
+
+
 					<?php
 			 			$sql="select * from tbl_cat";
 			 			$result=mysqli_query($connect,$sql)	;
 			 			while($rows=mysqli_fetch_array($result))
 			 {?>
-				
+
 					<option value="<?php echo $rows["id"];?>"><?php echo $rows['catname'];?>
 					</option>
-						
-				 
+
+
 			<?php }?>
 					</select>
 					<script language="javascript">
@@ -173,7 +167,7 @@
 					</script>
 				</td>
 			</tr>
-			
+
 			<tr>
 				<td>نام کالا</td>
 				<td><input type="text" name="txtn" id="txtn" value="<?php echo $row["name"];?>"></td>
@@ -190,21 +184,21 @@
 				<td>عکس </td>
 				<td><input type="file" name="aks" id="aks" ></td>
 			</tr>
-			
+
 			<tr>
 				<th colspan="2"><input type="submit" value="ثبت" name="add"></th>
 			</tr
 			<tr>
 				<th colspan="2"><input type="submit" value="ویرایش" name="edit"></th>
 			</tr>
-		</table>	   
+		</table>
 	</form>
-		
+
 	<?php }
 		 else {
-	
+
 	?>
-	
+
 	<form name="fmr" action="showproduct.php" method="post" enctype="multipart/form-data" >
 		<table dir="rtl" align="center" width="50%">
 			<tr>
@@ -212,24 +206,24 @@
 				<td>
 				<select name="cat" id="cat">
 					<option value="0">لطفا انتخاب کنید</option>
-				
-				
+
+
 					<?php
 			 			$sql="select * from tbl_cat";
 			 			$result=mysqli_query($connect,$sql)	;
 			 			while($rows=mysqli_fetch_array($result))
 			 {?>
-				
+
 					<option value="<?php echo $rows['id'];?>">
 						<?php echo $rows['catname'];?>
 					</option>
-						
-				 
+
+
 			<?php }?>
 					</select>
 				</td>
 			</tr>
-			
+
 			<tr>
 				<td>نام کالا</td>
 				<td><input type="text" name="txtn" id="txtn"></td>
@@ -246,15 +240,15 @@
 				<td>عکس </td>
 				<td><input type="file" name="aks" id="aks"></td>
 			</tr>
-			
+
 			<tr>
 				<th colspan="2"><input type="submit" value="ثبت" name="add"></th>
 			</tr>
 		</table>
-			   
+
 	</form>
 		 <?php } //else edit?>
-	
+
 	<hr><hr>
 	<table dir="rtl" align="center" width="100%" border="1">
 		<tr>
@@ -270,8 +264,8 @@
 			<th>ویرایش</th>
 			<th>حذف</th>
 		</tr>
-	
-	<?php 
+
+	<?php
 		$sql="select tbl_cat.id as 'id1',tbl_kala.id as 'id2',idc,catname,name,price,qty,aks from tbl_cat,tbl_kala where tbl_cat.id=idc";
 	$result=mysqli_query($connect,$sql);
 	while($rows=mysqli_fetch_array($result))
@@ -283,12 +277,11 @@
 		<td><?php echo $rows["price"];?></td>
 		<td><?php echo $rows["qty"];?></td>
 		<td><?php echo $rows["aks"];?></td>
-		
+
 		<td><a href="showproduct.php?ide=<?php echo $rows['id2'];?>&aksold=<?php echo $rows['aks'];?>">ویرایش</a></td>
 		<td><a href="showproduct.php?idd=<?php echo $rows['id2'];?>&aks=<?php echo $rows['aks'];?>">حذف</a></td>
 	</tr>
 	<?php }
 		?>
 </table>
-</body>
-</html>
+<?php include "./footer.php"?>

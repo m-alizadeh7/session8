@@ -1,17 +1,9 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>Untitled Document</title>
-	<script language="javascript" src="func.js"></script>
+<?php 
+	  include "./funcs.php";
+	  include "./header.php"; 
+	  include "./menu.php";
+?>	
 	
-</head>
-	<?php
-		include "../funcs.php";
-	?>
-	
-
-</script>
 <body>
 	
 
@@ -34,7 +26,7 @@
 		$p=$_POST["txtp"];
 		$j=$_POST["j"];
 		$c=$_POST["city"];
-	    $sql=" update tbl_user set Fname='$n', Lname='$f', Password='$p', Gender='$j', City='$c' where id='$id' ";
+	    $sql=" update tbl_karbar set Fname='$n', Lname='$f', Password='$p', Gender='$j', City='$c' where id='$id' ";
 		$result=mysqli_query($connect,$sql);
 		if($result)
 		{
@@ -52,7 +44,7 @@
 		if(isset($_GET["idd"]))  //delete
 		  {
 			$id=$_GET["idd"];
-			$sql="delete from tbl_user where id='$id'";
+			$sql="delete from tbl_karbar where id='$id'";
 			$result=mysqli_query($connect,$sql);
 			if ($result)
 			{
@@ -66,14 +58,14 @@
 	if (isset($_GET["ide"]))
 	{
 		$id=$_GET["ide"];
-		$sql="select * from tbl_user where id='$id'";
+		$sql="select * from tbl_karbar where id='$id'";
 		$result=mysqli_query($connect,$sql);
 		$rows=mysqli_fetch_array($result);
 		$idCity=$rows["City"];
 		
 	 
 	?>
-	<form name="fmr" action="index.php" method="post" onSubmit=" return Cheack_Data()">
+	<form name="fmr" action="edituser.php" method="post" onSubmit=" return Cheack_Data()">
 		<table dir="rtl" align="center" width="50%">
 			<tr>
 				<td></td>
@@ -145,7 +137,7 @@
 	
 	?>
 	
-	<form name="fmr" action="add.php" method="post" onSubmit=" return Cheack_Data()">
+	<form name="fmr" action="edituser.php" method="post" onSubmit=" return Cheack_Data()">
 		<table dir="rtl" align="center" width="50%">
 			<tr>
 				<td>نام</td>
@@ -210,8 +202,8 @@
 		</tr>
 	
 	<?php 
-		$sql="select*from tbl_user";
-	$result = mysqli_query($connect ,$sql);
+		$sql="select*from tbl_karbarr";
+	$result=mysqli_query($connect,$sql);
 	while($rows=mysqli_fetch_array($result))
 	{ ?>
 	<tr>
@@ -228,8 +220,8 @@
 			?>
 		</td>
 		<td><?php echo $rows["City"];?></td>
-		<td><a href="showuser.php?ide=<?php echo $rows['id'];?>">ویرایش</a></td>
-		<td><a href="showuser.php?idd=<?php echo $rows['id'];?>">حذف</a></td>
+		<td><a href="edituser.php?ide=<?php echo $rows['id'];?>">ویرایش</a></td>
+		<td><a href="edituser.php?idd=<?php echo $rows['id'];?>">حذف</a></td>
 	</tr>
 	<?php }
 		?>

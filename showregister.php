@@ -1,18 +1,18 @@
-<?php session_start(); ?>
-<?php include "header.php"; ?>
-<!--<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<title> پنل کاربری شما</title>
-	<link rel="stylesheet" type="text/css" href="../css/stylesheet.css">
-</head>
+<?php session_start();
+	  include "./funcs.php";
+	  include "./header.php";
+?>
 
-<body>-->
+<title>مدیریت کاربران</title>
+</head>
+<!-- end head-->
+<body>
+<?php	  include "./menu.php"; ?>
+
 	<div class="LoginUser">
-		<?php 
-			include "../funcs.php";
-			
+		<?php
+
+
 		if (isset($_POST["send"]))
 		{
 			$u=$_POST["txtu"];
@@ -38,11 +38,9 @@
 			<input type="text" name="txtu" id="txtu" required placeholder="نام کاربری مجدد" size="50%"><br>
 			<input type="password" name="txtp" id="txtp" placeholder="اصلاح کلمه عبور " size="50%"><br>
 			<input type="submit" value="ورود" name="send" width="100%">
-			
-			
+
+
 		</form>
 			</div>
 	</div>
-<?php include "footer.php"; ?>
-</body>
-</html>
+<?php include "./footer.php"; ?>

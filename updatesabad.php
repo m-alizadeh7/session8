@@ -1,19 +1,21 @@
-<?php session_start(); ?>
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>Untitled Document</title>
+<?php session_start();
+	  include "./funcs.php";
+	  include "./header.php";
+?>
+<title>به روز رسانی</title>
 </head>
-
+<!-- end head-->
 <body>
+<?php	  include "./menu.php"; ?>
+
+
 <?php
     include "funcs.php";
 	$sid=$_SESSION["sid"];
 	if(isset($_POST["sabt"]))
 	{
-		$q=$_POST["txtq"];	
-		$id=$_POST["txtid"];	
+		$q=$_POST["txtq"];
+		$id=$_POST["txtid"];
 		$r=rand();
 		$d="00/00/00";
     	for($i=0;$i<=count($id);$i++)
@@ -27,13 +29,11 @@
 			$res=mysqli_query($connect,$sql2);
 			$sql1="insert into tbl_factor (coder,sid,dateins)values('$r','$sid','$d')";
 			$result1=mysqli_query($connect,$sql1);
-			
+
 			unset($_SESSION["sid"]);
 			header("location:index.php?msg=1");
-			
-		}		
-	}		
-?>
 
-</body>
-</html>
+		}
+	}
+?>
+<?php include "./footer.php"?>
