@@ -33,7 +33,7 @@
 		  {
 			
 			move_uploaded_file($_FILES['aks']['tmp_name'],"../images/product/".$aksh) or die ("cannot move picture");
-			
+		
 				echo 'اطلاعات کالا با مئوفقیت ثبت گردید';
 			}
 		else
@@ -58,6 +58,7 @@
 		$q=$_POST["txtq"];
 		$f=$_FILES["aks"]["name"];
 		$type=$_FILES["aks"]["type"];
+		$passvand=array("image/jpeg","image/gif","image/png","image/jpg");
 		if(!empty($f))
 		{
 		if(in_array($type,$password))
@@ -133,7 +134,7 @@
 		$result=mysqli_query($connect,$sql);
 		$rows=mysqli_fetch_array($result);
 		$idc=$row['idc'];
-		
+		/*معمم*/
 		
 	?>
 	<form name="fmr" action="showproduct.php" method="post" enctype="multipart/form-data">
@@ -157,8 +158,7 @@
 			 			while($rows=mysqli_fetch_array($result))
 			 {?>
 				
-					<option value="<?php echo $rows['id'];?>">
-						<?php echo $rows['catname'];?>
+					<option value="<?php echo $rows["id"];?>"><?php echo $rows['catname'];?>
 					</option>
 						
 				 

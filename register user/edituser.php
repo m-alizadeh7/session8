@@ -9,7 +9,7 @@
 	
 	<?php
 		include "../funcs.php";
-		
+		include "../header.php"
 	?>
 	
 	

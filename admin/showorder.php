@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Untitled Document</title>
+<title>مدیریت دسته ها و کالا ها</title>
 	<script language="javascript" src="func.js"></script>
 	 <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
 </head>
@@ -50,13 +50,13 @@
 				<td> قیمت کل</td>
 			</tr>
 			<?php 
-				$sql="select tbl_kala.id as id1,name,price,tbl_order.id as id2,tbl_order.qty as q,idk from tbl_order,tbl_kala where (sid='$sid' and idk=tbl_kala.id)";
+				$sql="select tbl_kala.id as id1,name,price,tbl_order.id as id2,tbl_order.qty as q,idk from tbl_order,tbl_kala where (sid='$sid' and tbl_order.idk=tbl_kala.id)";
 		$result=mysqli_query($connect,$sql);
 		$i=1;
 		$sum=0;
 		while($rows=mysqli_fetch_array($result));
 		{
-			$sum=$_sum+$rows["q"]*$rows["price"];
+			$sum=$sum+$rows["q"]*$rows["price"];
 			?>
 		<tr>
 			<td><?php echo $i++; ?></td>
@@ -88,12 +88,13 @@
 			<th>کد رهگیری </th>
 			<th>sid </th>
 			<th>تاریخ </th>
-			<th>جزئیات فاکتور</th>
 			<th>حذف</th>
+        <th>بایگانی</th>
+        <th>جزئیات</th>
 		</tr>
 	
 	<?php 
-		$sql="select * from tbl_factor";
+		$sql="select * from tbl_factor where status=0";
 	$result=mysqli_query($connect,$sql);
 	while($rows=mysqli_fetch_array($result))
 	{ ?>
@@ -105,8 +106,9 @@
 		
 		
 		
-		<td><a href="showorder.php?sid=<?php echo $rows['sid'];?>">جزئیات</a></td>
-		<td><a href="showproduct.php?idd=<?php echo $rows['id'];?>">حذف</a></td>
+		<td><a href="showorder.php?idd=<?php echo $rows['id']; ?>">حذف</a></td>
+         <td><a href="showorder.php?sidb=<?php echo $rows['sid']; ?>">بایگانی</a></td>
+         <td><a href="showorder.php?sid=<?php echo $rows['sid']; ?>">جزئیات</a></td>
 	</tr>
 	<?php }?>
 </table>

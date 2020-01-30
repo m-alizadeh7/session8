@@ -4,16 +4,16 @@
 <meta charset="utf-8">
 <title>Untitled Document</title>
 	<script language="javascript" src="func.js"></script>
-	 <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
-</head>
 	
+</head>
 	<?php
 		include "../funcs.php";
-		
 	?>
 	
-	
+
+</script>
 <body>
+	
 
 	<?php
 	if(isset($_GET["msg"]))
@@ -73,7 +73,7 @@
 		
 	 
 	?>
-	<form name="fmr" action="showuser.php" method="post" onSubmit=" return Cheack_Data()">
+	<form name="fmr" action="index.php" method="post" onSubmit=" return Cheack_Data()">
 		<table dir="rtl" align="center" width="50%">
 			<tr>
 				<td></td>
@@ -94,7 +94,7 @@
 			</tr>-->
 			<tr>
 				<td>پسورد</td>
-				<td><input type="password" name="txtp" id="txtp" value="<?php echo $rows["Password"];?>"></td>
+				<td><input type="text" name="txtp" id="txtp" value="<?php echo $rows["Password"];?>"></td>
 			</tr>
 			 <tr>
            		<td>جنسیت</td>
@@ -161,7 +161,7 @@
 			</tr>
 			<tr>
 				<td>پسورد</td>
-				<td><input type="password" name="txtp" id="txtp"></td>
+				<td><input type="text" name="txtp" id="txtp"></td>
 			</tr>
 			<tr>
            		<td>جنسیت</td>
@@ -211,7 +211,7 @@
 	
 	<?php 
 		$sql="select*from tbl_user";
-	$result=mysqli_query($connect,$sql);
+	$result = mysqli_query($connect ,$sql);
 	while($rows=mysqli_fetch_array($result))
 	{ ?>
 	<tr>

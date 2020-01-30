@@ -42,18 +42,22 @@
 						</ul>
 			</li>
 			<ul>
+				<li></li>
+			<!--<li><a href="text/darbare.html"> آموزش php </a></li>
+			<li><a href="text/darbare.html"> آموزش Css</a></li>
+			<li><a href="text/darbare.html">آموزش JavaScript </a></li>	
+			<li><a href="text/darbare.html"> آموزش Html</a></li>-->
+				
 			<li><a href="text/darbare.html">درباره ما</a></li>
 			<li><a href="#footer">تماس با ما</a></li>
-			<li></li>
-			<li></li>
-			<li></li>
+			
 				</ul>
 			</span>
 			
-			<span class="menuh">
+			<!--<span class="menuh">
 				<li><a href="register user/index.php"><input type="submit" name="loginUser" id="loginUser" value="ثبت نام" class="regestermenu" width=""></a></li>
 				<li><a href="admin/index.php"><input type="submit" name="loginUser" id="loginUser" value="ورود " class="singin"></a></li>
-			</span>	
+			</span>	-->
 		
 	</div>
 			<!--<li><a href="">نوشیدنی </a>
