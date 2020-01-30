@@ -3,7 +3,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Untitled Document</title>
+<title>پنل مدیریت</title>
 	<link rel="stylesheet" type="text/css" href="../css/stylesheet.css">
 </head>
 
@@ -14,8 +14,8 @@
 		{?>
 	
 	<div class="welcome">
-		<span class="user">کاربر محترم: <?php echo $_SESSION["user"];?>خوش آمدید</span>
-		<span class="exit"><a href="exit.php"><img src="../images/کتاب.jpg"></a></span>
+		<span class="user">کاربر محترم:&nbsp; <?php echo $_SESSION["user"];?>&nbsp; خوش آمدید</span>
+		<span class="exit"><a href="exit.php"><img src="../images/64_logout.png"></a></span>
 	</div>
 	<div class="menu">
 		<ul>
@@ -23,6 +23,7 @@
 			<li><a href="showcat.php" target="myframe">دسته بدی کالا </a></li>
 			<li><a href="showproduct.php" target="myframe">مدیریت کالا </a></li>
 			<li><a href="showorder.php" target="myframe"> مدیریت سفارشات </a></li>
+			 <li><a href="showorderb.php" target="myframe">سفارشات بایگانی شده</a></li>
 			
 			
 		</ul>

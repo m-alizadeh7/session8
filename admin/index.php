@@ -26,13 +26,13 @@
 			if ($num>0)
 			{
 				$row=mysqli_fetch_array($result);
-				$_SESSION["user"]=$row["Fname"];
+				$_SESSION["user"]=$row["Fname"].' '.$row["family"];
 				$_SESSION["login"]=1;
 				header("location:panel.php");
 			}
 			else
 			{
-				echo 'نام کاربری و کلمه عبور اشتباه است';
+				echo'<div style="color:red; text-align:center;"><h1>نام کاربری و کلمه عبور اشتباه است</h1></div>';
 			}
 		}
 		?>

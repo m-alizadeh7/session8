@@ -60,14 +60,32 @@ body
 	width: 150px;
 	height: 150px;
 }
+.sabt
+{
+	width: 20%;  height: 35px; direction: ltr; margin-top:160px ;margin-right: 9px; border-radius: 5px; 
+	line-height: 50px;
+}
+.sabt ul
+{
+	list-style: none; color: white;
+}
+.sabt ul li
+{
+	float: right; 
+	/*margin-left: 30px;*/
+}
+.sabt input
+{
+	background: hsla(125,88%,40%,1.00); width: 50px; border-radius:8px;
+}
 .menu
 {
-	width: 98%;  height: 50px; background:hsla(358,67%,92%,1.00); margin-top:160px ;margin-right: 9px; border-radius: 5px; 
+	width: 98%;  height: 45px; background:hsla(241,100%,17%,1.00) ; border-radius: 5px;  margin-top: -10px;
 	line-height: 50px;
 }
 .menu ul
 {
-	list-style: none; color: white;
+	list-style: none; color: white;  margin-top: -10px;
 }
 .menu ul li
 {
@@ -78,7 +96,7 @@ body
 .menu a
 {
 	text-decoration: none;
-	color:hsla(359,87%,53%,1.00);
+	color:white;
 }
 .menu li :hover a
 {
@@ -116,7 +134,7 @@ body
 }
 .content
 {
-	width: 98%; height: auto; background:hsla(0,22%,92%,1.00); margin-top:auto;
+	width: 98%; height: auto; background:hsla(0,22%,92%,1.00); margin-top:5px;
 }
 .content img
 {
@@ -170,6 +188,15 @@ body
 {
 	width: 30%;
 }
+.sabad a
+{
+	text-decoration: none;
+}
+.sabad button
+{
+	background: hsla(123,83%,59%,1.00); width: 150px; border-radius: 5px; margin-top: 5px;
+	margin-bottom: 5px;
+}
 .welcome
 {
 	width: 90%; height: 100px; line-height: 50px; direction:rtl; background: hsla(233,90%,50%,1.00);
@@ -204,4 +231,27 @@ body
 {
 	width: 100%; height: auto; direction: rtl; background: hsla(359,78%,82%,1.00); color: blue;
 }
-
+.karbar
+{
+	width: 98%; height: auto; background: hsla(239,78%,75%,1.00); margin-right: 10px; margin-top: 160px;
+}
+.karbar .box
+{
+	width: 500px;
+}
+.aks img
+{
+	margin-right: 10px; margin-top: 10px; float: right;
+}
+.aks button
+{
+	background: hsla(118,75%,63%,1.00); color: white;
+}
+.sabad th
+{
+	background: hsla(254,80%,63%,1.00);
+}
+.sabad td
+{
+	background: hsla(336,67%,76%,1.00); color: white;
+}

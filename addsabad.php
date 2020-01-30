@@ -1,14 +1,12 @@
-<?php 
+<?php
 include "funcs.php";
-session_start();
 
+session_start();
 $sid=$_SESSION["sid"];
 $idk=$_GET["id"];
-$d=jdate();
-$sql="insert into tbl_order (idk,dateins,sid) value ('$idk','$d','$sid')";
+$d="00/00/00";
+$sql="insert into tbl_order(idk,dateins,sid)values('$idk','$d','$sid')";
 $result=mysqli_query($connect,$sql);
 if($result)
-{
-	header("location:index.php");
-}
-?>  
+header("location:index.php");
+?>

@@ -9,21 +9,28 @@
 	
 	<?php
 		include "../funcs.php";
-		
 	?>
 	
 	
 <body>
+	<div class="header">
+		<!--<span class="title">-->
+			<img src="../images/همه چی کالا.gif">
+			<!--</span>-->
+			
+		<!--<span class="service"><h3>ارایه کننده محصولات فناوری اطلاعات</h3></span>
+		<span class="logo"><img src="images/Untitled-1.png"</span>-->
+	</div>
 	
-
+<div class="karbar">
 	<?php
 	if(isset($_GET["msg"]))
 	{
 		$msg=$_GET["msg"];
 		if($msg==1)
-		echo ' ثبت نام با موفقیت انجام شد';
+			echo'<div style="color:red; text-align:center;"><h1>ثبت نام با موفقیت انجام شد</h1></div>';
 	   else if($msg==2)
-			echo 'نام کاربری قبلا ثبت شده';
+		   echo'<div style="color:red; text-align:center;"><h1>نام کاربری قبلا ثبت شده</h1></div>';
 		else 
 		echo ' خطا در ثبت نام';
 	}
@@ -38,7 +45,6 @@
 	$j=$_POST["j"];
 	$c=$_POST["city"];
 	
-	include "funcs.php";
 	$sql1="select * from tbl_karbar where Username='$u'";
 	$res=mysqli_query($connect,$sql1);
 	$num=mysqli_num_rows($res);
@@ -49,7 +55,7 @@
 	}
 	if($result)
 	{
-		/* header("location:index.php?msg=1"); */
+		 header("location:index.php?msg=1"); 
 		
 	}
 	else 
@@ -75,12 +81,12 @@ else
 		$result=mysqli_query($connect,$sql);
 		if($result)
 		{
-			echo 'رکورد با موفقیت ویرایش گردید';
+			echo'<div style="color:red; text-align:center;"><h1>رکورد با موفقیت ویرایش گردید</h1></div>';
 		}
 		
 		else
 		{
-			echo 'خطا در ثبت ویرایش';
+			echo'<div style="color:red; text-align:center;"><h1>خطا در ثبت ویرایش</h1></div>';
 		}
 		
 	}
@@ -110,7 +116,7 @@ else
 		
 	 
 	?>
-	<form name="fmr" action="index.php" method="post" onSubmit=" return Cheack_Data()">
+	<form name="fmr" action="index.php" method="post" onSubmit=" return Cheack_Data()" class="karbar">
 		<table dir="rtl" align="center" width="50%">
 			<tr>
 				<td></td>
@@ -182,23 +188,23 @@ else
 	
 	?>
 	
-	<form name="fmr" action="" method="post" onSubmit=" return Cheack_Data()">
+	<form name="fmr" action="" method="post" onSubmit=" return Cheack_Data()" class="karbar">
 		<table dir="rtl" align="center" width="50%">
 			<tr>
 				<td>نام</td>
-				<td><input type="text" name="txtn" id="txtn"></td>
+				<td><input type="text" name="txtn" id="txtn" class="box"></td>
 			</tr>
 			<tr>
 				<td> نام خانوادگی</td>
-				<td><input type="text" name="txtf" id="txtf"></td>
+				<td><input type="text" name="txtf" id="txtf" class="box"></td>
 			</tr>
 			<tr>
 				<td>نام کاربری</td>
-				<td><input type="text" name="txtu" id="txtu"></td>
+				<td><input type="text" name="txtu" id="txtu" class="box"></td>
 			</tr>
 			<tr>
 				<td>پسورد</td>
-				<td><input type="text" name="txtp" id="txtp"></td>
+				<td><input type="text" name="txtp" id="txtp" class="box"></td>
 			</tr>
 			<tr>
            		<td>جنسیت</td>
@@ -211,7 +217,7 @@ else
 			<tr>
 				<td>محل تولد</td>
 				<td>
-					<select name="city" id="city">
+					<select name="city" id="city" class="box">
 						<option value="0">لطفا انتخاب کنید </option>
 						<option value="1">تهران</option>
 						<option value="2">مشهد</option>
@@ -252,5 +258,7 @@ else
 	<?php }
 		?>
 </table>
+</div>
+<?php include "../footer.php"; ?>
 </body>
 </html>

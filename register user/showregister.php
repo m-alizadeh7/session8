@@ -1,5 +1,6 @@
 <?php session_start(); ?>
-<!doctype html>
+<?php include "header.php"; ?>
+<!--<!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
@@ -7,7 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="../css/stylesheet.css">
 </head>
 
-<body>
+<body>-->
 	<div class="LoginUser">
 		<?php 
 			include "../funcs.php";
@@ -42,5 +43,6 @@
 		</form>
 			</div>
 	</div>
+<?php include "footer.php"; ?>
 </body>
 </html>
