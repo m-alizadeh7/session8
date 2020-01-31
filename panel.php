@@ -1,4 +1,4 @@
-<?php session_start();
+<?php session_start();64_l
 	  include "./funcs.php";
 	  include "./header.php";
 ?>
@@ -13,7 +13,7 @@
 
 	<div class="welcome">
 		<span class="user">کاربر محترم:&nbsp; <?php echo $_SESSION["user"];?>&nbsp; خوش آمدید</span>
-		<span class="exit"><a href="exit.php"><img src="../images/64_logout.png"></a></span>
+		<span class="exit"><a href="exit.php"><img src="./images/64_logout.png"></a></span>
 	</div>
 	<div class="menu">
 		<ul>

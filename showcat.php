@@ -139,5 +139,4 @@
 	<?php }
 		?>
 </table>
-</body>
-</html>
+<?php include "./footer.php"?>

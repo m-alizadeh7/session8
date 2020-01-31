@@ -13,14 +13,14 @@
 	    // delete record
 		if(isset($_GET["idd"]))
 		{
-
+../
 			$id=$_GET["idd"];
 			$sql2="delete from tbl_factor where id='$id'";
 			$result1=mysqli_query($connect,$sql2);
 			if($result1)
 			{
 
-				@unlink("../image/product".$aks);
+				@unlink("./image/product".$aks);
 				echo '<div style="color:red;text-align:center;">رکورد مورد نظر با موفقیت حذف شد</div>';
 		    }
 			else

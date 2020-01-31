@@ -34,6 +34,13 @@
           <li class="nav-item">
             <a class="nav-link" href="./showregister.php"><input type="submit" name="loginUser" id="loginUser" value="ورود " class="singin"></a>
           </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown08" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">مدیریت</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown08">
+              <a class="dropdown-item" href="./panel.php">panel</a>
+              <a class="dropdown-item" href="./showcat.php">showcat</a>
+              <a class="dropdown-item" href="./showproduct.php">product</a>
+
             </div>
           </li>
         </ul>

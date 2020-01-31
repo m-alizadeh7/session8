@@ -4,6 +4,83 @@
 	  include "./menu.php";
 ?>
 <body>
+
+
+
+	<body class="bg-light">
+		<form name="fmr" action="register.php" method="post" onSubmit=" return Cheack_Data()" >
+
+	    <div class="container">
+	      <div class="py-5 text-center">
+	        <img class="d-block mx-auto mb-4" src="img/logo.png" alt="" width="72" height="72">
+	        <h2>فرم ثبت نام </h2>
+	        <p class="lead">بشمار 3 فرم رو تکمیل کن وقت کمه</p>
+	      </div>
+
+	            <div class="mb-3">
+	              <label for="text">نام  <span class="text-muted"></span></label>
+	              <input type="twxt" class="form-control" id="txtn" name="txtn" placeholder="غلام">
+	            </div>
+	            <div class="mb-3">
+	              <label for="text">نام خانوادگی  <span class="text-muted"></span></label>
+	              <input type="text" class="form-control" id="txtf" name="txtf" placeholder="دشت چمنی ">
+	            </div>
+	            <div class="mb-3"  >
+	              <label for="username">نام کاربری</label>
+	              <div class="input-group">
+	                <div class="input-group-prepend">
+	                  <span class="input-group-text">@</span>
+	                </div>
+	                <input type="text" class="form-control" id="username" placeholder="Batman_Chamani" required="">
+
+	              </div>
+								<div class="mb-3">
+									<label for="Password">پسورد<span class="text-muted"></span></label>
+									<input type="password" class="form-control" id="txtp" name="txtp" placeholder="">
+								</div>
+	            </div>
+	            <div class="row">
+	              <div class="col-md-5 mb-3">
+	                <label for="country" >شهر</label>
+	                <select class="custom-select d-block w-100" id="city" required="">
+	                  <option value="" selected="selected">تکمیل کنید ...</option>
+	                  <option value ="0">&#128580 تهران </option>
+	                  <option value ="1">&#129332 شایر</option>
+	                  <option value ="2">&#129501 روندل</option>
+	                  <option value ="3">&#129497 گاندولین</option>
+	                  <option value ="4">&#128110 شیکاگو</option>
+	                </select>
+
+	              </div>
+	              <div class="col-md-4 mb-3">
+
+
+
+	              </div>
+
+	            </div>
+	            <hr class="mb-4">
+
+	            <h4 class="mb-3"><span style='font-size:35px;'>&#128699;</span></h4>
+
+	            <div class="d-block my-3" >
+	              <div class="custom-control custom-radio">
+	                <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked="checked" required="">
+	                <label class="custom-control-label" for="credit"><span style='font-size:25px;'>&#128697;  ..</span></label>
+	              </div>
+	              <div class="custom-control custom-radio">
+	                <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required="">
+	                <label class="custom-control-label" for="debit"><span style='font-size:25px;'>&#128698;  ..</span></label>
+	              </div>
+	            </div>
+	            <hr class="mb-4">
+	            <input class="btn btn-primary btn-lg btn-block" type="submit" value="ثبت" name="add">
+	          </form>
+	        </div>
+	      </div>
+
+	      <footer class="my-5 pt-5 text-muted text-center text-small">
+
 <div class="karbar">
 	<?php
 	if(isset($_GET["msg"]))
@@ -49,191 +126,9 @@ else
 {
 /*	header("location:index.php?msg=2");*/
 }
+?>
 
 
-	if(isset($_POST["edit"]))
-	{
-		$id=$_POST["txtid"];
-		$n=$_POST["txtn"];
-		$f=$_POST["txtf"];
-		$p=$_POST["txtp"];
-		$j=$_POST["j"];
-		$c=$_POST["city"];
-	    $sql=" update tbl_karbar set Fname='$n', Lname='$f', Password='$p', Gender='$j', City='$c' where id='$id' ";
-		$result=mysqli_query($connect,$sql);
-		if($result)
-		{
-			echo'<div style="color:red; text-align:center;"><h1>رکورد با موفقیت ویرایش گردید</h1></div>';
-		}
-
-		else
-		{
-			echo'<div style="color:red; text-align:center;"><h1>خطا در ثبت ویرایش</h1></div>';
-		}
-
-	}
-
-
-		if(isset($_GET["idd"]))  //delete
-		  {
-			$id=$_GET["idd"];
-			$sql="delete from tbl_karbar where id='$id'";
-			$result=mysqli_query($connect,$sql);
-			if ($result)
-			{
-				echo '<div style="color:red; text-align:center;">رکورد با موفقیت حذف شد</div>';
-			}
-			else
-			{
-				echo '<div style="color:red; text-align:center;">خطا در حذف رکورد</div>';
-			}
-		}
-	if (isset($_GET["ide"]))
-	{
-		$id=$_GET["ide"];
-		$sql="select * from tbl_karbar where id='$id'";
-		$result=mysqli_query($connect,$sql);
-		$rows=mysqli_fetch_array($result);
-		$idCity=$rows["City"];
-
-
-	?>
-	<form name="fmr" action="index.php" method="post" onSubmit=" return Cheack_Data()" class="karbar">
-		<table dir="rtl" align="center" width="50%">
-			<tr>
-				<td></td>
-				<td><input type=hidden name="txtid" id="txtid" value="<?php echo $rows["id"];?>"></td>
-			</tr>
-
-			<tr>
-				<td>نام</td>
-				<td><input type="text" name="txtn" id="txtn" value="<?php echo $rows["Fname"];?>"></td>
-			</tr>
-			<tr>
-				<td> نام خانوادگی</td>
-				<td><input type="text" name="txtf" id="txtf" value="<?php echo $rows["Lname"];?>"></td>
-			</tr>
-			<!--<tr>
-				<td>نام کاربری</td>
-				<td><input type="text" name="txtu" id="txtu"></td>
-			</tr>-->
-			<tr>
-				<td>پسورد</td>
-				<td><input type="text" name="txtp" id="txtp" value="<?php echo $rows["Password"];?>"></td>
-			</tr>
-			 <tr>
-           		<td>جنسیت</td>
-                <td>
-                <?php
-					if($rows["Gender"]==0)
-					{
-					?>
-                    	<input type="radio"  id="j1" name="j" checked value="0"> مرد
-                    	<input type="radio" id="j2" name="j" value="1" > زن
-					<?php }
-					else
-					{ ?>
-						<input type="radio"  id="j1" name="j" value="0"> مرد
-                    	<input type="radio" id="j2" name="j" value="1" checked > زن
-
-                	<?php } ?>
-                </td>
-             </tr>
-			<tr>
-				<td>محل تولد</td>
-				<td>
-					<select name="city" id="city">
-						<option value="0">لطفا انتخاب کنید </option>
-						<option value="1">تهران</option>
-						<option value="2">مشهد</option>
-						<option value="3">اردبیل</option>
-						<option value="4">قم</option>
-						<option value="5">شیراز</option>
-					</select>
-					<script language="javascript">
-						var element= document.getElementById("City");
-						var n=element.length;
-						for (var i=1;i<n;i++)
-							if(element[i].value==<?php echo $idCity; ?>)
-							   document.getElementById("City").selectedIndex=i;
-					</script>
-				</td>
-			</tr>
-			<tr>
-				<th colspan="2"><input type="submit" value="ویرایش" name="edit"></th>
-			</tr>
-		</table>
-	</form>
-
-	<?php }
-		 else {
-
-	?>
-
-	<form name="fmr" action="" method="post" onSubmit=" return Cheack_Data()" class="karbar">
-		<table dir="rtl" align="center" width="50%">
-			<tr>
-				<td>نام</td>
-				<td><input type="text" name="txtn" id="txtn" class="box"></td>
-			</tr>
-			<tr>
-				<td> نام خانوادگی</td>
-				<td><input type="text" name="txtf" id="txtf" class="box"></td>
-			</tr>
-			<tr>
-				<td>نام کاربری</td>
-				<td><input type="text" name="txtu" id="txtu" class="box"></td>
-			</tr>
-			<tr>
-				<td>پسورد</td>
-				<td><input type="text" name="txtp" id="txtp" class="box"></td>
-			</tr>
-			<tr>
-           		<td>جنسیت</td>
-                <td>
-                	<input type="radio"  id="j1" name="j" checked value="0"> مرد
-                    <input type="radio" id="j2" name="j" value="1" > زن
-                </td>
-             </tr>
-
-			<tr>
-				<td>محل تولد</td>
-				<td>
-					<select name="city" id="city" class="box">
-						<option value="0">لطفا انتخاب کنید </option>
-						<option value="1">تهران</option>
-						<option value="2">مشهد</option>
-						<option value="3">اردبیل</option>
-						<option value="4">قم</option>
-						<option value="5">شیراز</option>
-					</select>
-				</td>
-			</tr>
-			<tr>
-				<th colspan="2"><input type="submit" value="ثبت" name="add"></th>
-			</tr>
-		</table>
-
-	</form>
-		 <?php } //else edit
-	?>
-
-	<?php
-		$sql="select*from tbl_karbar";
-	$result=mysqli_query($connect,$sql);
-	while($rows=mysqli_fetch_array($result))
-	{ ?>
-
-			<?php
-
-			?>
-		</td>
-		<td><?php echo $rows["City"];?></td>
-
-
-	</tr>
-	<?php }
-		?>
 </table>
 </div>
 <?php include "./footer.php"; ?>

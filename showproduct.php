@@ -26,7 +26,7 @@
 		if($result)
 		  {
 
-			move_uploaded_file($_FILES['aks']['tmp_name'],"../images/product/".$aksh) or die ("cannot move picture");
+			move_uploaded_file($_FILES['aks']['tmp_name'],"./images/product/".$aksh) or die ("cannot move picture");
 
 				echo 'اطلاعات کالا با مئوفقیت ثبت گردید';
 			}
@@ -62,8 +62,8 @@
 			$res=mysqli_query($connect,$sql);
 			if($res)
 			{
-					move_uploaded_file($_FILES['aks']['tmp_name'],"../images/product/".$aksh) or die ("cannot move picture");
-				unlink("../images/product/".$aksold);
+					move_uploaded_file($_FILES['aks']['tmp_name'],"./images/product/".$aksh) or die ("cannot move picture");
+				unlink("./images/product/".$aksold);
 				echo 'رکورد شما با موفقیت ویرایش شد';
 			}
 			else
@@ -93,7 +93,7 @@
 			if($res)
 			{
 
-				unlink("../images/product/".$aksold);
+				unlink("./images/product/".$aksold);
 				echo 'رکورد شما با موفقیت ویرایش شد';
 			}
 			else
@@ -112,7 +112,7 @@
 			$result=mysqli_query($connect,$sql);
 			if ($result)
 			{
-				unlink("../images/product/".$aks);
+				unlink("./images/product/".$aks);
 				echo '<div style="color:red; text-align:center;">رکورد با موفقیت حذف شد</div>';
 			}
 			else
