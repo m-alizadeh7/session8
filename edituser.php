@@ -1,12 +1,12 @@
-<?php 
+<?php
 	  include "./funcs.php";
 	  include "./header.php"; 
-	  include "./menu.php";
-?>	
-	
+?>
+<title>مدیریت</title>
+</head>
+<!-- end head-->
 <body>
-	
-
+<?php include "./menu.php"; ?>
 	<?php
 	if(isset($_GET["msg"]))
 	{
@@ -226,5 +226,4 @@
 	<?php }
 		?>
 </table>
-</body>
-</html>
+<?php include "./footer.php"?>
