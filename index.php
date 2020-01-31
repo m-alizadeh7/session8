@@ -42,7 +42,7 @@
 			<span class="aks">
 				<table border="2">
 					<ul>
-							<img src="images/product/<?php echo $rows1["aks"];?>" width="200px" height="200px">
+							<img src="./images/product/<?php echo $rows1["aks"];?>" width="200px" height="200px">
 							<br>
 								نام محصول:
 							<?php echo $rows1["name"];?>
@@ -65,7 +65,7 @@
 			<span class="aks">
 				<table border="2">
 					<ul>
-						<img src="images/product/<?php echo $rows2["aks"];?>" width="300px" height="200px">
+						<img src="./images/product/<?php echo $rows2["aks"];?>" width="300px" height="200px">
 						<br>
 							نام محصول:<?php echo $rows2["name"];?>
 						<br>
@@ -115,8 +115,8 @@
 			<button>
 					<a href="showfactor.php?sid=<?php echo $sid; ?>">نهایی کردن سفارش</a>
 			</button>
-			<span ><a href=""><img src="images/کد-تخفیف-1.gif" width="30%" height="200px"></a></span>
-			<span ><a href=""><img src="images/مناطق-تحت-پوشش2.jpg" width="30%" height="200px"></a></span>
+			<span ><a href=""><img src="./images/img1.jpg" width="30%" height="200px"></a></span><br>
+			<span ><a href=""><img src="./images/img2.jpg" width="30%" height="200px"></a></span>
 		</span>
 	</div>
 	<!-- end content -->
